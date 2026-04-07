@@ -9,10 +9,16 @@
         padding: '2dp'               # Margines wewnętrzny (odstęp przycisków od krawędzi paska)
 
         Button:                      # Pierwszy przycisk
-            text: "Start"            # Tekst wyświetlany na przycisku
-
+            text: "Start"
+            canvas.after:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Line:
+                    width: 2
+                    rectangle: (self.x, self.y, self.width, self.height)
         Button:                      # Drugi przycisk
-            text: "Galeria"          # Tekst wyświetlany na przycisku
+            text: "Galeria"
+                     # Tekst wyświetlany na przycisku
             # Tutaj możesz dopisać zdarzenie, np. on_release: root.open_gallery()
 
         Button:                      # Trzeci przycisk
