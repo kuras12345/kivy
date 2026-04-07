@@ -1,0 +1,24 @@
+<Cookie>:    # Definicja wyglądu dla klasy Cookie (Twojego głównego kontenera)
+    BoxLayout:    # Użycie układu pudełkowego, który układa elementy jeden obok drugiego
+        orientation: 'horizontal'    # Ustawienie orientacji: 'horizontal' to od lewej do prawej
+        size_hint: (1, None)         # Szerokość: 1 (100% okna), Wysokość: None (wyłączamy automat)
+        height: '50dp'               # Ustalamy sztywną wysokość na 50 jednostek dp (idealne pod palec)
+        pos_hint: {'top': 1}         # Przyklejamy ten pasek do samej góry ekranu (top = 1.0)
+
+        spacing: '2dp'               # Odstęp (pusta przestrzeń) pomiędzy przyciskami
+        padding: '2dp'               # Margines wewnętrzny (odstęp przycisków od krawędzi paska)
+
+        Button:                      # Pierwszy przycisk
+            text: "Start"            # Tekst wyświetlany na przycisku
+
+        Button:                      # Drugi przycisk
+            text: "Galeria"          # Tekst wyświetlany na przycisku
+            # Tutaj możesz dopisać zdarzenie, np. on_release: root.open_gallery()
+
+        Button:                      # Trzeci przycisk
+            text: "Opcje"            # Tekst wyświetlany na przycisku
+            # Tutaj możesz dopisać zdarzenie, np. on_release: root.open_options()
+
+        Button:                      # Czwarty przycisk
+            text: "Wyjdź"            # Tekst wyświetlany na przycisku
+            on_release: app.stop()   # Po puszczeniu przycisku wywołaj funkcję zamknięcia aplikacji
